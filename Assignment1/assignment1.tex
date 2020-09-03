@@ -244,65 +244,56 @@ This document contains a solution for a pair of given linear equations.
 Download the python codes from 
 %
 \begin{lstlisting}
-https://github.com/pranaya14014/EE5609/tree/master/code
+https://github.com/pranaya14014/EE5609/tree/master/Assignment1/code
 \end{lstlisting}
 %
 
 \section{PROBLEM}
 Solve the following pair of linear equations
- \begin{center} 
-  (8  5)\textbf{x} = 9\\
-  (3  2)\textbf{x} = 4
- \end{center}
+ \begin{align} 
+ \myvec{8&5}\textbf{x} = 9\nonumber\\
+ \myvec{3&2}\textbf{x} = 4 \nonumber
+ \end{align}
+
 
 %
 %
 \section{SOLUTION}
 Step 1: Construct the Augmented Matrix
-\begin{center}
-$$
-\begin{pmatrix}
+\begin{align}
+\myvec{
 8&5&9\\
-3&2&4
-\end{pmatrix}
-$$
-\end{center}
+3&2&4\nonumber
+}
+\end{align}
 
 Step 2: Perform row opertions to get a Row Echelon form\\
-\begin{align*}
+\begin{align}
 \myvec{
 8&5&9\\
-3&2&4
+3&2&4 
 }
-\xleftrightarrow{ R2\rightarrow 8 R2-3 R1}
-\myvec{
-8&5&9\\
-0&1&5
-}\\
+\xleftrightarrow{ R2\rightarrow 8 R2-3 R1}\nonumber
 \myvec{
 8&5&9\\
 0&1&5
 }
-\xleftrightarrow{ R1\rightarrow R1- 5 R2}
+\xleftrightarrow{ R1\rightarrow R1- 5 R2}\nonumber\\
 \myvec{
 8&0& -16\\
-0&1&5
-}\\
-\myvec{
-8&0& -16\\
-0&1&5
+0&1&5 
 }
-\xleftrightarrow{ R1\rightarrow \frac{R1}{8}}
+\xleftrightarrow{ R1\rightarrow \frac{R1}{8}}\nonumber
 \myvec{
 1&0&-2\\
 0&1&5
-}\\
-\end{align*}
+}\nonumber\\
+\end{align}
 
 
 Above final matrix is in the reduced Echelon form and from this matrix we get the solution. Last column represents the solution of the given linear equation.\\
 \begin{center}
-Hence the solution is of the given linear equations (8  5)\textbf{x} = 9, (3  2)\textbf{x} = 4 is \myvec{-2& 5}
+Hence the solution is of the given linear equations \myvec{8&5}\textbf{x} = 9, \myvec{3&2}\textbf{x} = 4 is \myvec{-2& 5}
 \end{center}
 
 \begin{figure}[!ht]
