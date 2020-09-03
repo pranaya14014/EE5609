@@ -38,4 +38,5 @@ plt.plot(x2,y2,label="line 2: (3 2)x = 4")
 plt.scatter(soln[0],soln[1], color="black", label='intersection point: (-2,5)')
 plt.legend()
 plt.show()
+plt.savefig('plot.png')
 
