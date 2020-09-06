@@ -19,4 +19,4 @@ m = B.det()
 if l==m:
   print("Both the determinants are equal")
 else:
-  print("Both are not equal")
+  print("Both the determinants are not equal")
