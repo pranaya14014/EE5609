@@ -15,7 +15,7 @@ B = sp.Matrix([[1,a**2,a**3],[1,b**2,b**3],[1,c**2,c**3]])
 #Finding determinants
 l = A.det()
 m = B.det()
-# For proving determinants are equal
+# For proving that determinants are equal
 if l==m:
   print("Both the determinants are equal")
 else:
