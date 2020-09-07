@@ -267,8 +267,11 @@ Without expanding the determinant, prove that
 1&c^2&b^3
 }
 \end{align}
+\section{PROPERTIES OF DETERMINANTS}
+Properties required for solving this problem:\\
+\textbf{Property.1}: If all the elements of row/column are multiplied by a  scalar then the value of new determinant  is equal to multiplying the old determinant by that scalar.\\
+\textbf{Property.2}: If any two rows/columns are exchanged then the sign of determinant changes.
 
-%
 \section{SOLUTION}
 Proceeding to the solution by taking the left hand side matrix of (1.0.1) and applying properties of determinants.
 \begin{align}
@@ -277,9 +280,7 @@ Proceeding to the solution by taking the left hand side matrix of (1.0.1) and ap
  b&b^2&ca\\
  c&c^2&ab}
  \end{align}
-Using the property of determinants that multiplication of a constant to elements of any row/column is equal to multiplying the determinant by that constant.
-\mydet{\vec{A_1}} = $\vec{c}$\mydet{\vec{A}} where $\vec{A_1}$ is the determinant of a matrix with a one row/column of matrix $\vec{A}$ multiplied by a constant $\vec{c}$.\\
-Based on the above property performing the following operations:\\
+Using \textbf{Property.1} performing the following operations:\\
 Multiplying and dividing by $\vec{a}$
 \begin{align}
 \mydet{
@@ -318,7 +319,7 @@ b^2&b^3&abc\\
 c^2&c^3&abc
 }
 \end{align}
-As the last column has similar elements using the same property of determinant performing the following operation.
+As the last column has similar elements,
 \begin{align}
 \frac{abc}{abc}\mydet{
 a^2&a^3&1\\
@@ -331,21 +332,18 @@ b^2&b^3&1\\
 c^2&c^3&1
 }
 \end{align}
-Based on the property of determinants that if any two rows/columns are exchanged then the signs of determinant changes performing the following operations on (2.0.5):
-\begin{align}
-C_2\leftrightarrow C_3 ; C_1\leftrightarrow C_2 \nonumber
-\end{align}
+Applying \textbf{Property.2} on (3.0.5):
 \begin{align}
 \mydet{
 a^2&a^3&1\\
 b^2&b^3&1\\
 c^2&c^3&1
-} = -
+} \xleftrightarrow{C_2\rightarrow C_3} -
 \mydet{
 a^2&1&a^3\\
 b^2&1&b^3\\
 c^2&1&c^3
-}=
+}\xleftrightarrow{C_1\rightarrow C_2}
 \mydet{
 1&a^2&a^3\\
 1&b^2&b^3\\
