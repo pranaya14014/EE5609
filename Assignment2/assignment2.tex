@@ -265,22 +265,21 @@ Without expanding the determinant, prove that
 1&a^2&a^3\\
 1&b^2&b^3\\
 1&c^2&b^3
-}
+} \label{eq:1}
 \end{align}
 \section{PROPERTIES OF DETERMINANTS}
-Properties required for solving this problem:\\
+Properties required for solving this problem:
 \textbf{Property.1}: If all the elements of row/column are multiplied by a  scalar then the value of new determinant  is equal to multiplying the old determinant by that scalar.\\
 \textbf{Property.2}: If any two rows/columns are exchanged then the sign of determinant changes.
-
 \section{SOLUTION}
-Proceeding to the solution by taking the left hand side matrix of (1.0.1) and applying properties of determinants.
+Proceeding to the solution by taking the left hand side matrix of \eqref{eq:1} and applying properties of determinants.
 \begin{align}
 \mydet{
  a&a^2&bc\\
  b&b^2&ca\\
  c&c^2&ab}
  \end{align}
-Using \textbf{Property.1} performing the following operations:\\
+Using \textbf{Property.1} performing the following operations:
 \begin{align}
 \mydet{
  a&a^2&bc\\
@@ -310,10 +309,7 @@ c&c^2&ab
 a^2&a^3&abc\\
 b^2&b^3&abc\\
 c^2&c^3&abc
-}
-\end{align}
-As the last column has similar elements,
-\begin{align}
+}\\
 \frac{abc}{abc}\mydet{
 a^2&a^3&1\\
 b^2&b^3&1\\
@@ -323,9 +319,9 @@ c^2&c^3&1
 a^2&a^3&1\\
 b^2&b^3&1\\
 c^2&c^3&1
-}
+}\label{eq:2}
 \end{align}
-Applying \textbf{Property.2} on (3.0.5):
+Applying \textbf{Property.2} on \eqref{eq:2}
 \begin{align}
 \mydet{
 a^2&a^3&1\\
@@ -343,7 +339,7 @@ c^2&1&c^3
 1&c^2&c^3
 }
 \end{align}
-The above determinant is equal to right hand side determinant of equation (1.0.1).\\
+The above determinant is equal to right hand side determinant of equation \eqref{eq:1}.\\
 Hence proved:
 \begin{align}
 \mydet{
@@ -355,7 +351,7 @@ Hence proved:
 1&a^2&a^3\\
 1&b^2&b^3\\
 1&c^2&b^3
-}\nonumber
+}
 \end{align}
 
 \end{document}
