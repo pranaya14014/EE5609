@@ -22,5 +22,3 @@ plt.annotate("E",(3,2),weight='bold',horizontalalignment='left',verticalalignmen
 plt.show()
 plt.savefig("triangle.png")
 
-
-
