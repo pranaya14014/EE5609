@@ -244,47 +244,65 @@ This document contains a proof for a theorem related to triangle.
 Download the python codes from 
 %
 \begin{lstlisting}
-https://github.com/pranaya14014/EE5609/tree/master/Assignment2/code
+https://github.com/pranaya14014/EE5609/tree/master/Assignment3/code
 \end{lstlisting}
 %
 and latex-tikz codes from 
 %
 \begin{lstlisting}
-https://github.com/pranaya14014/EE5609/tree/master/Assignment2
+https://github.com/pranaya14014/EE5609/tree/master/Assignment3
 \end{lstlisting}
 %
 \section{PROBLEM}
 A line through the mid-point of a side of a triangle parallel to another side bisects the third side.
 
-\section{THEOREM}
-Theorem used for proving,\\
-\textbf{Basic Proportionality Theorem:} If a line is drawn parallel to one side of a triangle intersecting other two sides in distinct points, then the other two sides are divided in same ratio.
 \section{SOLUTION}
-Consider a $\triangle{ABC}$ with sides AB, BC, AC\\
-Let $\vec{D}$ be the mid-point of AB,
+\textbf{Given:} Consider a $\triangle{ABC}$ with sides AB, BC, AC. Let $\vec{D}$ be the mid-point of AB, $\vec{E}$ be a point on AC and $DE\parallel{BC}$\\
+\textbf{Need to prove:} $\vec{E}$ = $ \frac{A+C}{2}$\\
+\textbf{Proof:}
 \begin{align}
-AD= DB = \frac{AC}{2} \label{eq:1}
+\vec{D} = \frac{A+B}{2} \\
+DE\parallel{BC}\label{eq:1}
 \end{align}
-Let $\vec{E}$ be a point on AC and let DE be a line passing through $\vec{D}$ and $\vec{E}$. From given $DE\parallel{BC}$\\
-Using Basic proportionality theorem,
+Let direction vectors be  $\vec{m}_{DE}$ and  $\vec{m}_{BC}$ for line segment DE and BC respectively.
 \begin{align}
-\frac{AD}{DB}= \frac{AE}{EC}
+ \vec{m}_{DE} = \vec{D} - \vec{E} = \frac{\vec{A}+\vec{B}}{2}-\vec{E} \label{eq:2}\\
+ \vec{m}_{BC} = \vec{B}-\vec{C}\label{eq:3}
 \end{align}
-Using \eqref{eq:1},
+From \eqref{eq:2} we can write the following with $\vec{k}$ being a contant,
 \begin{align}
-\frac{AE}{EC} = 1 \\ 
-AE = EC \label{eq:2}
+ \vec{m}_{DE} = k \vec{m}_{BC} \label{eq:4}
+\end{align} 
+Using \eqref{eq:2} and \eqref{eq:3} in the above equation,
+\begin{align}
+\frac{\vec{A}+\vec{B}}{2}-\vec{E} = k (\vec{B}-\vec{C}) \label{eq:4}
 \end{align}
-From \eqref{eq:2} we can say $\vec{E}$ is the midpoint of AC.\\
-Hence proved a line through the mid-point of a side of a triangle parallel to another side bisects the third side.
+From the above we get k = $\frac{1}{2}$\\
+Substituting k value in \eqref{eq:4} 
+\begin{align}
+\frac{\vec{A}}{2}-\vec{E} = -\frac{1}{2} \vec{C}\\
+\vec{E} = \frac{\vec{A}+\vec{C}}{2}
+\end{align}
+\begin{center}
+Hence Proved
+\end{center}
+
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{triangle.png}
-\caption{Triangle plot generated using python}
-\label{fig:plot}
+\resizebox{\columnwidth}{!}{
+\begin{tikzpicture}
+
+\draw (0,0) node[anchor=north]{$B$}
+  -- (2,4) node[anchor=west]{$A$}
+  -- (4,0) node[anchor=north]{$C$}
+  -- cycle;
+\draw(1,2) node[anchor=east]{$D$}
+  -- (3,2) node[anchor=west]{$E$}
+  -- cycle;
+\end{tikzpicture}
+}
+\caption{Triangle}
+\label{fig:Triangle}
 \end{figure}
- 
-
-
 \end{document}
