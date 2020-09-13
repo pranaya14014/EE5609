@@ -273,16 +273,22 @@ Using cosine formula for $\angle{ACB}$,
 From \eqref{eq:1} and \eqref{eq:2},
 \begin{align}
 \frac{\vec{a^T}\vec{b}}{\norm{\vec{a}}\norm{\vec{b}}}= \frac{\vec{c^T}\vec{b}}{\norm{\vec{b}}\norm{\vec{c}}}\\
-\frac{\vec{a^T}}{\norm{\vec{a}}} = \frac{\vec{c^T}}{\norm{\vec{c}}}\\
-\norm{\vec{c}}\vec{a^T} = \norm{\vec{a}}\vec{c^T}
+\frac{\vec{a^T}\vec{b}}{\norm{\vec{a}}} = \frac{\vec{c^T}\vec{b}}{\norm{\vec{c}}}\\
+\norm{\vec{c}}\vec{a^T}\vec{b} = \norm{\vec{a}}\vec{c^T}\vec{b}\\
+\vec{b}\brak{\norm{\vec{c}}\vec{a^T}-\norm{\vec{a}}\vec{c^T}} = 0
 \end{align}
-From the given,
+From the above either $\vec{b} = 0$ or $\brak{\norm{\vec{c}}\vec{a^T}-\norm{\vec{a}}\vec{c^T}} = 0$ or both are 0.
+From given as  $\vec{b} = \brak{\vec{B}-\vec{C}}$ =0 but this can't be true as $\vec{B}$ and $\vec{C}$ are points on a triangle. So, 
 \begin{align}
-\norm{\vec{c}}\brak{\vec{A}-\vec{B}}^T =  \norm{\vec{a}}\brak{\vec{A}-\vec{C}}^T\\ 
-\norm{\vec{c}}\brak{\vec{A^T}-\vec{B^T}}= \norm{\vec{a}}\brak{\vec{A^T}-\vec{C^T}}\\
-\brak{\norm{\vec{c}}-\norm{\vec{a}}}\vec{A^T}- \norm{\vec{c}}\vec{B^T}+ \norm{\vec{a}}\vec{C^T} = 0 \label{eq:3}
+\brak{\norm{\vec{c}}\vec{a^T}-\norm{\vec{a}}\vec{c^T}} = 0\label{eq:3}
 \end{align}
-As the $\vec{A}$, $\vec{B}$ and $\vec{C}$ are points on the triangle and using the Linear independence in \eqref{eq:3} we get,
+From given we can write \eqref{eq:3} as,
+\begin{align}
+\norm{\vec{c}}\brak{\vec{A}-\vec{B}}^T - \norm{\vec{a}}\brak{\vec{A}-\vec{C}}^T = 0\\ 
+\norm{\vec{c}}\brak{\vec{A^T}-\vec{B^T}}- \norm{\vec{a}}\brak{\vec{A^T}-\vec{C^T}} = 0\\
+\brak{\norm{\vec{c}}-\norm{\vec{a}}}\vec{A^T}- \norm{\vec{c}}\vec{B^T}+ \norm{\vec{a}}\vec{C^T} = 0 \label{eq:4}
+\end{align}
+As the $\vec{A}$, $\vec{B}$ and $\vec{C}$ are points on the triangle and using the Linear independence in \eqref{eq:4} we get,
 \begin{align}
 \norm{\vec{c}} = \norm{\vec{a}}
 \end{align}
