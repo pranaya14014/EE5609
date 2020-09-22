@@ -259,67 +259,55 @@ Prove that the equation
     x^{2}+6xy+9y^{2}+4x+12y-5=0 \label{eq:0}
 \end{align}
 represents two parallel lines.
-\section{THEORY}
-The second order general equation of the form
-\begin{align} 
-	ax^2 + 2bxy + cy^2 + 2dx + 2ey + f = 0 
-\end{align}
-can be written as:
-\begin{align}
-    \vec{x}^T\vec{V}\vec{x} +2\vec{u}^T\vec{x}+f=0 \label{eq:1}
-\end{align}
-where,
-\begin{align}
- \vec{V}= \myvec{a &b\\b&c}\quad \vec{u}^T = \myvec{d &e}
-\end{align}
-Pair of straight line equation in vector form  by,
-\begin{align}
-\vec{n_1}^T\vec{x}= \vec{c_1}\label{eq:2}\\
-\vec{n_2}^T\vec{x} = \vec{c_2}\label{eq:3}
-\end{align}
-\section{CONDITION TO BE PARALLEL}
-Two lines are said to be parallel if they have same slopes or the angle between them is zero.
 \section{SOLUTION}
-The given equation \eqref{eq:0} can be written using \eqref{eq:1} as
+The given equation \eqref{eq:0} can be written as
 \begin{align}
-\vec{x}^T\myvec{1 & 3 \\ 3 & 9}\vec{x} +2\myvec{2 &6}\vec{x}-5=0\label{eq:4}\\
-\vec{V} = \myvec{1 & 3 \\ 3 & 9} \quad \vec{u} = \myvec{2 \\ 6} \quad f= -5 \label{eq:5}
+\vec{x}^T\myvec{1 & 3 \\ 3 & 9}\vec{x} +2\myvec{2 &6}\vec{x}-5=0\label{eq:1}\\
+\vec{V} = \myvec{1 & 3 \\ 3 & 9} \quad \vec{u} = \myvec{2 \\ 6} \quad f= -5 \label{eq:2}
 \end{align}
 Equation \eqref{eq:0} represents pair of straight line as,
 \begin{align}
 D = \mydet{1&3&2\\3&9&6\\2&6&-5} = 0
 \end{align}
-Equating the product of \eqref{eq:2} and \eqref{eq:3} with \eqref{eq:4}
+Vector form of straight lines,
+\begin{align}
+\vec{n_1}^T\vec{x}= \vec{c_1}\\
+\vec{n_2}^T\vec{x} = \vec{c_2}
+\end{align}
+Equating their product with \eqref{eq:1}
 \begin{align}
 (\vec{n_1}^T\vec{x} -\vec{c_1})(\vec{n_2}^T\vec{x} - \vec{c_2})= \vec{x}^T\myvec{1 & 3 \\ 3 & 9}\vec{x} +2\myvec{2 &6}\vec{x}-5
 \end{align}
 \begin{align}
-\vec{n_1}*\vec{n_2}=\myvec{1\\6\\9}\label{eq:6}\\
+\vec{n_1}*\vec{n_2}=\myvec{1\\6\\9}\label{eq:3}\\
 c_2\vec{n_1}+c_1\vec{n_2} = -2\myvec{2\\6}\\
 c_1c_2 = -5
 \end{align}
 The slopes of the lines can be given by roots of the equation,
 \begin{align} 
-cm^2+2bm+a=0 \label{eq:7}\\
-m_i = \frac{-b\pm \sqrt{-\mydet{\vec{V}}}}{c}\label{eq:8}\\
-\vec{n_i}=k_i\myvec{-m_i\\1}
+cm^2+2bm+a=0 \label{eq:4}\\
+m_i = \frac{-b\pm \sqrt{-\mydet{\vec{V}}}}{c}\label{eq:5}\\
+\vec{n_i}=k_i\myvec{-m_i\\1}\label{eq:6}
 \end{align}
-From \eqref{eq:4} in \eqref{eq:7}
+From \eqref{eq:1} equation \eqref{eq:4} becomes
 \begin{align}
 9m^2+6m+1=0
 \end{align}
-Using \eqref{eq:5} we get
+Using \eqref{eq:2},
 \begin{align}
 \mydet{\vec{V}} = \mydet{1 & 3\\ 3 & 9} = 0
 \end{align}
-Substituting the values in \eqref{eq:8},
+Substituting the values in \eqref{eq:5},
 \begin{align}
 m_i = \frac{-3\pm 0}{9}\\
-m_1= m_2 = \frac{-1}{3} \label{eq:9}\\
+m_1= m_2 = \frac{-1}{3} \label{eq:7}
+\end{align}
+Substituting values in \eqref{eq:6}
+\begin{align}
 \vec{n_1}=k_1\myvec{\frac{1}{3}\\1}\\
 \vec{n_2}=k_2\myvec{\frac{1}{3}\\1}
 \end{align}
-Using \eqref{eq:6} we get,
+Using \eqref{eq:3},
 \begin{align}
 k_1k_2 = 9
 \end{align}
@@ -334,16 +322,16 @@ Verifying $\vec{n_1}$ and $\vec{n_2}$ by computing the convolution by representi
 \end{align}
 Finding the Angle between the lines,
 \begin{align}
-\theta = \cos^{-1}\brak{\frac{\vec{n_1}^T\vec{n_2}}{\norm{\vec{n_1}}\norm{\vec{n_2}}}}\\
-\vec{n_1}^T\vec{n_2} = \myvec{1&3}\myvec{1\\3} = 10 \label{eq:11}\\
-\norm{\vec{n_1}} = \sqrt{10}\quad \norm{\vec{n_2}}=\sqrt{10} \label{eq:12}
+\theta = \cos^{-1}\brak{\frac{\vec{n_1}^T\vec{n_2}}{\norm{\vec{n_1}}\norm{\vec{n_2}}}}\label{eq:8}\\
+\vec{n_1}^T\vec{n_2} = \myvec{1&3}\myvec{1\\3} = 10 \label{eq:9}\\
+\norm{\vec{n_1}} = \sqrt{10}\quad \norm{\vec{n_2}}=\sqrt{10} \label{eq:10}
 \end{align}
-Substituting \eqref{eq:11} and \eqref{eq:12} in \eqref{eq:10} we get,
+Substituting \eqref{eq:9} and \eqref{eq:10} in \eqref{eq:8} we get,
 \begin{align}
 \theta = \cos^{-1}(1)\\
-\theta = 0^{\circ}\label{eq:13}
+\theta = 0^{\circ}\label{eq:11}
 \end{align}
-From \eqref{eq:9} and \eqref{eq:13} shows the given equation \eqref{eq:0} represents two parallel lines. Hence proved.
+From \eqref{eq:7} and \eqref{eq:11} shows the given equation \eqref{eq:0} represents two parallel lines. Hence proved.
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{Straight_lines.png}
