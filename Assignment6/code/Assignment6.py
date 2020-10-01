@@ -10,5 +10,5 @@ Original file is located at
 import numpy as np
 Q = np.array([[8/np.sqrt(73),-3/(73*np.sqrt(73))],[3/np.sqrt(73),8/(73*np.sqrt(73))]])
 R = np.array([[np.sqrt(73),46/np.sqrt(73)],[0,1/(73*np.sqrt(73))]])
-A = Q@R #
+A = Q@R 
 print(A)
