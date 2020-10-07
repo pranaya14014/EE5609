@@ -26,4 +26,4 @@ Sinv[:2,:2] = np.diag(sinv)
 
 #Foot of the perpendicular
 x = V.T.dot(Sinv).dot(U.T).dot(b)
-print(x)
+print("the foot of the perpendicular",x)
