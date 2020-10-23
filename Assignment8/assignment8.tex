@@ -249,44 +249,40 @@ https://github.com/pranaya14014/EE5609/tree/master/Assignment8
 %
 \section{PROBLEM}
 An $n\times n$ matrix $\vec{A}$ is called upper-triangular if $\vec{A_{ij}}=0$ for $i>j$, that is, if every entry below the main diagonal is 0. Prove that an upper-triangular (square) matrix is invertible if and only if every entry on its main diagonal is different from 0.
-\section{EXPLANATION}
-If inverse of $\vec{A}$ exists then the linear system $\vec{A}\vec{x}=\vec{b}$ has a unique solution for every $n\times 1$ matrix $\vec{b}$
+\section{Properties of Determinants}
+Properties required for the proof: \\
+1. If $\vec{A}$ is invertible then $\mydet{\vec{A}} \neq 0$\\
+2. If the entries of a row(or column) in a square matrix are multiplied by a number k, then the determinant of resulting matrix is k$\mydet{\vec{A}}$.\\
+3. $\mydet{\vec{I}} = 1$ \\
+4. The determinant value remains same if we do any operation like $R_i \rightarrow R_i +kR_j$ or $C_i \rightarrow C_i+kC_j$ 
 \section{SOLUTION}
-Considering $\vec{A}$ and $\vec{b}$,
+Considering $\vec{A}$, an upper triangular matrix and proceeding futher with properties of determinants
 \begin{align}
-\vec{A} = \myvec{a_{1,1}&a_{1,2}&...&a_{1,(n-1)}&a_{1,n}\\
+\mydet{\vec{A}} = \mydet{a_{1,1}&a_{1,2}&...&a_{1,(n-1)}&a_{1,n}\\
 0&a_{2,2}&...&a_{2,(n-2)}&a_{2,n}\\
-0&0&...&&.\\.&&...&&.\\0&0&...&a_{(n-1),(n-1)}&a_{(n-1),(n)}\\0&0&...&0&a_{n,n}}\quad
-\vec{b}=\myvec{b_1\\b_2\\.\\.\\b_{n-1}\\b_n}
+0&0&...&&.\\.&&...&&.\\0&0&...&a_{(n-1),(n-1)}&a_{(n-1),(n)}\\0&0&...&0&a_{n,n}}
 \end{align}
-hence $\vec{x}$ can be found using augmented matrix
 \begin{align}
-\vec{x}=\vec{A|b} = \myvec{a_{1,1}&a_{1,2}&...&a_{1,(n-1)}&a_{1,n}&b_1\\
-0&a_{2,2}&...&a_{2,(n-2)}&a_{2,n}&b_2\\
-0&0&...&&.&.\\.&&...&&.&.\\0&0&...&a_{(n-1),(n-1)}&a_{(n-1),(n)}&b_{n-1}\\0&0&...&0&a_{n,n}&b_n}\\
-\xleftrightarrow{ R_n\rightarrow \frac{R_n}{a_{n,n}}}
-\myvec{a_{1,1}&a_{1,2}&...&a_{1,(n-1)}&a_{1,n}&b_1\\
-0&a_{2,2}&...&a_{2,(n-2)}&a_{2,n}&b_2\\
-0&0&...&&.&.\\.&&...&&.&.\\0&0&...&a_{(n-1),(n-1)}&a_{(n-1),(n)}&b_{n-1}\\0&0&...&0&1&\frac{b_n}{a_{n,n}}}\\
-\xleftrightarrow{ R_{n-1}\rightarrow \frac{1}{a_{(n-1),(n-1)}}\nonumber\brak{R_(n-1)-a_{(n-1),(n)}R_n}}\\
-\myvec{a_{1,1}&a_{1,2}&...&a_{1,(n-1)}&a_{1,n}&b_1\\
-0&a_{2,2}&...&a_{2,(n-2)}&a_{2,n}&b_2\\
-0&0&...&&.&.\\.&&...&&.&.\\0&0&...&1&0&\frac{b_{n-1}}{a_{(n-1),(n-1)}}-\frac{a_{(n-1),(n)}b_n}{a_{n,n}}\\0&0&...&0&1&\frac{b_n}{a_{n,n}}}\label{eq:1}
+\xleftrightarrow{R_{n-1}\rightarrow R_{n-1}-a_{(n-1),(n-1)}R_n} \mydet{a_{1,1}&a_{1,2}&...&a_{1,(n-1)}&a_{1,n}\\0&a_{2,2}&...&a_{2,(n-2)}&a_{2,n}\\
+0&0&...&&.\\.&&...&&.\\0&0&...&a_{(n-1),(n-1)}&0\\0&0&...&0&a_{n,n}}
 \end{align}
-From \eqref{eq:1} we get,
+Similarly performing the row operations on rest of the rows we get a diagonal matrix which is,
 \begin{align}
-\vec{x_n} = \frac{b_n}{a_{n,n}}\label{eq:2}\\
-\vec{x_{n-1}} = \frac{b_{n-1}}{a_{(n-1),(n-1)}}-\frac{a_{(n-1),(n)}b_n}{a_{n,n}}\label{eq:3}
+\mydet{\vec{A}} = \mydet{a_{1,1}&0&...&0&0\\0&a_{2,2}&...&0&0\\
+0&0&...&&.\\.&&...&&.\\0&0&...&a_{(n-1),(n-1)}&0\\0&0&...&0&a_{n,n}}\\ = a_{1,1}\mydet{1&0&...&0&0\\0&a_{2,2}&...&0&0\\
+0&0&...&&.\\.&&...&&.\\0&0&...&a_{(n-1),(n-1)}&0\\0&0&...&0&a_{n,n}}\\
+ = a_{1,1}a_{2,2}\mydet{1&0&...&0&0\\0&1&...&0&0\\
+0&0&...&&.\\.&&...&&.\\0&0&...&a_{(n-1),(n-1)}&0\\0&0&...&0&a_{n,n}}
 \end{align}
-Using \eqref{eq:2} in \eqref{eq:3} we get,
+Similarly we get,
 \begin{align}
-\vec{x_{n-1}}=\frac{b_{n-1}-a_{(n-1),(n)}\vec{x_{(n-1)}}}{a
-_{(n-1),(n-1)}}
+\mydet{\vec{A}} = a_{1,1}a_{2,2}...a_{(n-1),(n-1)}a_{n,n}\mydet{1&0&...&0&0\\0&1&...&0&0\\
+0&0&...&&.\\.&&...&&.\\0&0&...&1&0\\0&0&...&0&1}\\
+= a_{1,1}a_{2,2}...a_{(n-1),(n-1)}a_{n,n}\mydet{\vec{I_{n,n}}}
 \end{align}
-similary if we continue row reduction for $i^{th}$ row we get ,
 \begin{align}
-\vec{x_i} = \frac{b_i-\sum_{j=i+1}^{n}\vec{x_i}a_{i,j}}{a_{i,i}}\label{eq:4}
+\mydet{\vec{A}}= a_{1,1}a_{2,2}...a_{(n-1),(n-1)}a_{n,n}\label{eq:1}
 \end{align}
-Using \eqref{eq:2}, $\vec{x}$ will have a unique solution for any $\vec{b}$ if and only if $a_{n,n}\neq 0$ as if it is 0 then $\vec{x}$ will have either no solution or infinitely many solution. Similarly if we consider any $i^{th}$ row using \eqref{eq:4} we can say $a_{i,i}\neq 0$.\\
-Hence proved
+From \eqref{eq:1} we see that $\mydet{\vec{A}}$ is  the product of diagonal elements. If anyone of the diagonal element is zero then $\mydet{\vec{A}}=0$ which implies $\vec{A}$ is not invertible.So, a matrix is invertible if and only if diagonal elements are not 0.\\
+Hence Proved.
 \end{document}
