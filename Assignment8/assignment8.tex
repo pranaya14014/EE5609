@@ -252,11 +252,11 @@ An $n\times n$ matrix $\vec{A}$ is called upper-triangular if $\vec{A_{ij}}=0$ f
 \section{SOLUTION}
 Considering $\vec{A}$, an upper triangular matrix. Using the property that determinant of upper triangular matrix is the product of diagonal elements,
 \begin{align}
-\mydet{\vec{A}}= a_{1,1}a_{2,2}...a_{(n-1),(n-1)}a_{n,n}\label{eq:1}
+\mydet{\vec{A}}= \prod_{i=1}^{n} a_{i,i}\label{eq:1}
 \end{align}
 If $\vec{A}$ be invertible then  $\mydet{\vec{A}} \neq 0$. Hence from \eqref{eq:1} we get,
 \begin{align}
-a_{1,1}a_{2,2}...a_{(n-1),(n-1)}a_{n,n} \neq 0 \label{eq:2}
+\prod_{i=1}^{n} a_{i,i} \neq 0 \label{eq:2}
 \end{align}
 if any diagonal element is 0 then \eqref{eq:2} won't be right hence no diagonal elements should be 0.\\
 Hence Proved.
