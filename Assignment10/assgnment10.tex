@@ -256,16 +256,13 @@ Let,
 \vec{T}(x+iy)=\myvec{x\\y} \label{eq:1}\\
 x,y \in \mathbb{R} \quad i \in \mathbb{C}
 \end{align}
-checking if \eqref{eq:1} preserves multiplication and scalar multiplication. Let,
+Consider two vectors,
 \begin{align}
-\vec{u}=x_1+iy_1 \quad \vec{v}=x_2+iy_2\\
-\vec{T}(\vec{u}+c\vec{v})=\vec{T}((x_1+iy_1)+c(x_2+iy_2))\\
-=\vec{T}(x_1+y_1+cx_2+icy_2)\\
-=\vec{T}((x_1+cx_2)+i(y_1+cy_2))\\
-=\myvec{x_1+cx_2\\y_1+cy_2}\\
-=\myvec{x_1\\y_1}+\myvec{cx_2\\cy_2}\\
-=\myvec{x_1\\y_1}+c\myvec{x_2\\y_2}\\
-=\vec{T}(\vec{u})+c\vec{T}(\vec{v})
+\vec{u},\vec{v} \in \vec{V} 
+\end{align}
+Using \eqref{eq:1} we see above vectors preserves multiplication and scalar multiplication as, 
+\begin{align}
+\vec{T}(\vec{u}+c\vec{v})= \vec{T}(\vec{u})+\vec{T}(c\vec{v})=\vec{T}(\vec{u})+c\vec{T}(\vec{v})
 \end{align}
 Hence this is a Linear transformation and the inverse is $\vec{T}^{-1}(x,y) = (x+iy)$. Hence the two spaces are isomorphic. 
 \end{document}
