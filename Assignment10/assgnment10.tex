@@ -260,9 +260,21 @@ Consider two vectors,
 \begin{align}
 \vec{u},\vec{v} \in \vec{V} 
 \end{align}
-Using \eqref{eq:1} we see above vectors preserves multiplication and scalar multiplication as, 
+Using \eqref{eq:1} if $\vec{T}$ is Linear Transformation. 
 \begin{align}
 \vec{T}(\vec{u}+c\vec{v})= \vec{T}(\vec{u})+\vec{T}(c\vec{v})=\vec{T}(\vec{u})+c\vec{T}(\vec{v})
 \end{align}
-Hence this is a Linear transformation and the inverse is $\vec{T}^{-1}(x,y) = (x+iy)$. Hence the two spaces are isomorphic. 
+Hence this is a Linear transformation. Now, checking if $\vec{T}$ is one-one. let,
+\begin{align}
+\vec{u}=0 = 0+j0\\
+\end{align}
+from \eqref{eq:1},
+\begin{align}
+\vec{T}(\vec{u})=\myvec{0\\0}\label{eq:2}
+\end{align}
+From \eqref{eq:2} we see $\vec{T}$ is one-one. Now, checking if $\vec{T}$ is onto. let,
+\begin{align}
+\vec{T}(\vec{u}) =\myvec{a\\b} \label{eq:3}
+\end{align}
+where, $a$, $b$ are scalars. Using \eqref{eq:1}, we see there exists a solution for \eqref{eq:2} for all $a$, $b$. Hence $\vec{T}$ is onto. Therefore $\vec{T}$ is isomorphic over $\vec{V}$ and $\mathbb{R}^2$
 \end{document}
