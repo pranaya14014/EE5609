@@ -248,21 +248,17 @@ https://github.com/pranaya14014/EE5609/tree/master/Assignment13
 \end{lstlisting}
 %
 \section{PROBLEM}
-Let $\vec{A}$ be an $n \times n$ diagonal matrix over the field $\vec{F}$, i.e., a matrix satisfying $\vec{A}_{ij} = 0$ for $i \neq j$. Let $f$ be the polynomial over $\vec{F}$ defined by $f = (x - \vec{A}_{11}) . . . (x - \vec{A}_{nn})$. What is the matrix $f(\vec{A})$? 
+Let $\vec{A}$ be an $n \times n$ diagonal matrix over the field $\vec{F}$, i.e., a matrix satisfying $\vec{A}_{ij} = 0$ for $i \neq j$. Let $f$ be the polynomial over $\vec{F}$ defined by $f = (x - A_{11}) . . . (x - A_{nn})$. What is the matrix $f(\vec{A})$? 
 \section{SOLUTION}
 Given  $\vec{A}$ is a diagonal matrix. let, diagonal elements be,
 \begin{align}
-\vec{A}_{ij}= a_{ij} \quad i=j \quad i,j= 1,2,...,n
+{A}_{ij}= a_{ij} \quad i=j \quad i,j= 1,2,...,n
 \end{align}
+Characteristic equation of $\vec{A}$,
 \begin{align}
-\vec{A}-\vec{A}_{11}= \myvec{0&...&...\\0&(a_{22}-a_{11})&..\\.&&.\\.&&.\\0&0&(a_{nn}-a_{11})}\\
-\vec{A}-\vec{A}_{22}= \myvec{(a_{11}-a_{22})&...&...\\0&0&..\\.&&.\\.&&.\\0&0&(a_{nn}-a_{22})}
+\mydet{A-\lambda\vec{I}}=0\\
+\implies (a_{11}-\lambda)(a_{22}-\lambda)...(a_{nn}-\lambda)=0\\
+\implies(A_{11}-\lambda)(A_{22}-\lambda)...(A_{nn}-\lambda)=0\label{eq:1}
 \end{align}
-similary, $\vec{A}-\vec{A}_{ii}$ is a diagonal matrix with $i,i$ element zero.
-\begin{align}
-\begin{multlined}
-(\vec{A}-\vec{A}_{11})(\vec{A}-\vec{A}_{22})=\\\myvec{0&..&..&..\\0&0&&..\\.&&(a_{ii}-a_{11})(a_{ii}-a_{22})&.\\.&&.\\0&0&..&(a_{nn}-a_{11})(a_{nn}-a_{22})}
-\end{multlined}
-\end{align}
-similarly, each diagonal entry of $(\vec{A} - \vec{A}_{11})...(\vec{A} - \vec{A}_{nn})$ is a product of numbers one of which is zero. Hence, $f(\vec{A})$ is a zero matrix.
+from \eqref{eq:1} we see $f(x)=0$ is the characteristic equation of $\vec{A}$. Hence using Cayley-Hamilton theorem we get $f(\vec{A})=0$.
 \end{document}
