@@ -253,36 +253,35 @@ Let
 \end{align}
 and $\vec{I}$ be the $3\times3$ identity matrix. If 
 \begin{align}
-\vec{A}^{-1}=a\vec{A}^2+b\vec{A}+c\vec{I} 
+6\vec{A}^{-1}=a\vec{A}^2+b\vec{A}+c\vec{I} \label{eq:1}
 \end{align} for $a,b,c \in \mathbb{R}$ then (a,b,c) equals
+\begin{align}
+1.\quad (1,2,1)\\
+2.\quad (1,-1,2)\\
+3.\quad(4,1,1)\\
+4. \quad(1,4,1)
+\end{align}
 \section{SOLUTION}
-First finding $\vec{A}^{-1}$
+Finding the characteristic equation,
 \begin{align}
-\mydet{\vec{A}}=\mydet{1&0&2\\1&-2&0\\0&0&-3} = 6\\
-6\vec{A}^{-1}=\frac{6}{6}\myvec{6&0&4\\3&-3&2\\0&0&-2}=\myvec{6&0&4\\3&-3&2\\0&0&-2} \label{eq:1}
+\mydet{\vec{A}-\lambda\vec{I}} =\mydet{1-\lambda&0&2\\1&-2-\lambda&0\\0&0&-3-\lambda}\\
+\implies (1-\lambda)(-2-\lambda)(-3-\lambda)=0\\
+\implies (\lambda^2+\lambda-2)(-3-\lambda)=0\\
+\implies \lambda^3+4\lambda^2+\lambda-6 = 0
 \end{align}
-now finding $\vec{A}^{2}$,
+Using Cayley-Hamilton Theorem we get,
 \begin{align}
-\vec{A}^2=\myvec{1&0&2\\1&-2&0\\0&0&-3}\myvec{1&0&2\\1&-2&0\\0&0&-3}=\myvec{1&0&-4\\-1&4&2\\0&0&9}
+\vec{A}^3+4\vec{A}^2+\vec{A}-6\vec{I}=0\\
+\implies\vec{A}^3+4\vec{A}^2+\vec{A} = 6\vec{I}\\
+\implies\vec{A}(\vec{A}^2+4\vec{A}+\vec{I})= 6\vec{I} \label{eq:2}
 \end{align}
+$\mydet{\vec{A}} =6 \neq 0$ hence inverse exists. Hence \eqref{eq:2} we get,
 \begin{align}
-\begin{multlined}
-a\vec{A}^2+b\vec{A}+c\vec{I} \\= \myvec{a&0&-4a\\-a&4a&2a\\0&0&9a}+\myvec{b&0&2b\\b&-2b&0\\0&0&-3b}+\myvec{c&0&0\\0&c&0\\0&0&c}
-\end{multlined}
-\end{align}
+6\vec{A}^{-1} = \vec{A}^2+4\vec{A}+\vec{I} \label{eq:3}
+\end{align} 
+Comparing \eqref{eq:1} and \eqref{eq:3} we get,
 \begin{align}
-=\myvec{a+b+c&0&-4a+2b\\-a+b&4a-2b+c&2a\\0&0&9a-3b+c}\label{eq:2}
+a=1 \quad b=4 \quad c=1
 \end{align}
-equating \eqref{eq:1} and \eqref{eq:2}
-\begin{align}
-\begin{multlined}
-\myvec{6&0&4\\3&-3&2\\0&0&-2}\\=\myvec{a+b+c&0&-4a+2b\\-a+b&4a-2b+c&2a\\0&0&9a-3b+c}
-\end{multlined}
-\end{align}
-Equating both sides,
-\begin{align}
-2a=2 \quad -a+b=3 \quad a+b+c=6\\
-\implies a=1 \quad b=4 \quad c=1 
-\end{align}
-Hence $(a,b,c) = (1,4,1)$
+Hence $(a,b,c)= (1,4,1)$  
 \end{document}
