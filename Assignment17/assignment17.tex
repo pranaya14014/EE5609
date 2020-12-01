@@ -251,18 +251,13 @@ Let $E_1,...,E_k$ be linear operators on the space $\vec{V}$ such that $E_1+...+
 a) Prove that if $E_iE_j = 0$ for $i\neq j$,then $E_i^2=E_i$ for each $i$.\\
 b) In the case $k=2$, prove the converse of (a). That is, if $E_1+E_2=\vec{I}$ and $E_1^2 = E_1$, $E_2^2= E_2$, then $E_1E_2=0$
 \section{SOLUTION}
-a) From the given,
+\begin{enumerate}
+\item[a)]From the given,
 \begin{align}
 E_1+...+E_k =\vec{I}\\
-\implies E_i = \vec{I}-E_1-...-E_{i-1}-E_{i+1}-...-E_k\\
-\implies E_i^2 = E_i\brak{\vec{I}-E_1-...-E_{i-1}-E_{i+1}-...-E_k}
-\end{align}
-\begin{align}
-\begin{multlined}
-\implies E_i^2 = E_i-E_iE_1-...-E_iE_{i-1}-E_iE_{i+1}-...\\-E_iE_k
-\end{multlined}
-\end{align}
-\begin{align}
+E_i = \vec{I}-E_1-...-E_{i-1}-E_{i+1}-...-E_k\\
+E_i^2 = E_i\brak{\vec{I}-E_1-...-E_{i-1}-E_{i+1}-...-E_k}\\
+E_i^2 = E_i-E_iE_1..-E_iE_{i-1}-E_iE_{i+1}-..-E_iE_k\\
 \implies E_i^2 = E_i -\sum_{i\neq j}E_iE_j
 \end{align}
 substituting $E_iE_j = 0$ for $i\neq j$ in the above equation we get,
@@ -270,8 +265,8 @@ substituting $E_iE_j = 0$ for $i\neq j$ in the above equation we get,
 E_i^2 = E_i -0\\
 \implies E_i^2 = E_i
 \end{align}
-Hence proved if $E_iE_j = 0$ for $i\neq j$, then $E_i^2=E_i$\\
-b) Using,
+Hence proved if $E_iE_j = 0$ for $i\neq j$, then $E_i^2=E_i$
+\item[b)] Using,
 \begin{align}
 E_1+E_2=\vec{I} \label{eq:1}
 \end{align}
@@ -292,4 +287,5 @@ Similarly multiplying on both sides of \eqref{eq:1}and substituting $E_2^2= E_2$
 \implies E_1E_2= 0 \label{eq:3}
 \end{align}
 Hence proved from \eqref{eq:2} and \eqref{eq:3} that if $E_1+E_2=\vec{I}$ and $E_1^2 = E_1$, $E_2^2= E_2$, then $E_1E_2=0$
+\end{enumerate}
 \end{document}
