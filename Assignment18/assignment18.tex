@@ -253,23 +253,23 @@ Let $( | )$ be the standard inner product on $\mathbb{R}^2$.
 \begin{align}
 \alpha = \myvec{1\\ 2} \quad \beta = \myvec{-1\\ 1}
 \end{align}
-If $\gamma$ is a vector such that $(\alpha|\gamma)= -1$ and $(\beta|\gamma)=3$. Find $\gamma$
+If $\gamma$ is a vector such that $(\alpha^T\gamma)=-1$ and $(\beta^T\gamma)=3$. Find $\gamma$
 \item[(b)] Show that for any $\alpha$ in $\mathbb{R}^2$ we have
 \begin{align}
-\alpha = (\alpha|\epsilon_1)\epsilon_1 + (\alpha|\epsilon_2)\epsilon_2
+\alpha = (\alpha^T\epsilon_1)\epsilon_1 + (\alpha^T\epsilon_2)\epsilon_2
 \end{align} 
 \end{enumerate}
 \section{SOLUTION}
 \begin{enumerate}
-\item[(a)] From $\alpha = \myvec{1\\ 2}$ and $(\alpha|\gamma)= -1$ we get,
+\item[(a)] From $\alpha = \myvec{1\\ 2}$ and $(\alpha^T\gamma)= -1$ we get,
 \begin{align}
-(\alpha|\gamma)= -1 \\
+(\alpha^T\gamma)= -1 \\
 \implies \alpha_1\gamma_1+\alpha_2\gamma_2 =-1\\
 \implies \gamma_1+ 2\gamma_2 =-1 \label{eq:1}
 \end{align}
-from $\beta = \myvec{-1\\ 1}$ and $(\beta|\gamma)=3$ we get,
+from $\beta = \myvec{-1\\ 1}$ and $(\beta^T\gamma)=3$ we get,
 \begin{align}
-(\beta|\gamma)=3\\
+(\beta^T\gamma)=3\\
 \implies \beta_1\gamma_1+\beta_2\gamma_2 = 3\\
 \implies -\gamma_1+\gamma_2=3 \label{eq:2}
 \end{align}
@@ -286,14 +286,14 @@ R_2} \myvec{1&2&-1\\0&1&\frac{2}{3}} \xleftrightarrow{ R_1\rightarrow R_1-2R_2} 
 Hence $\gamma = \myvec{\frac{-7}{3}\\\frac{2}{3}}$
 \item[(b)]let $\epsilon_1 =\myvec{1\\0}$ and $\epsilon_2=\myvec{0\\1}$ are standard basis vectors,
 \begin{align}
-(\alpha|\epsilon_1)= \alpha_1+0.\alpha_2 = \alpha_1\\
-\implies (\alpha|\epsilon_1)\epsilon_1 = \myvec{\alpha_1&0}^T \label{eq:3}\\
-(\alpha|\epsilon_2)=0.\alpha_1+\alpha_2 = \alpha_2\\ 
-\implies (\alpha|\epsilon_2)\epsilon_2 = \myvec{0&\alpha_2}^T \label{eq:4}
+(\alpha^T\epsilon_1)= \alpha_1+0.\alpha_2 = \alpha_1\\
+\implies (\alpha^T\epsilon_1)\epsilon_1 = \myvec{\alpha_1\\0} \label{eq:3}\\
+(\alpha^T\epsilon_2)=0.\alpha_1+\alpha_2 = \alpha_2\\ 
+\implies (\alpha^T\epsilon_2)\epsilon_2 = \myvec{0\\\alpha_2} \label{eq:4}
 \end{align}
 using \eqref{eq:3} and \eqref{eq:4} we get,
 \begin{align}
-\implies (\alpha|\epsilon_1)\epsilon_1 +(\alpha|\epsilon_2)\epsilon_2 = \myvec{\alpha_1&\alpha_2}^T = \alpha
+\implies (\alpha^T\epsilon_1)\epsilon_1 +(\alpha^T\epsilon_2)\epsilon_2 = \myvec{\alpha_1\\\alpha_2} = \alpha
 \end{align}
 Hence proved
 \end{enumerate}
