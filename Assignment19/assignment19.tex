@@ -1,0 +1,233 @@
+\documentclass[journal,12pt]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\newcommand\myemptypage{
+	\null
+	\thispagestyle{empty}
+	\addtocounter{page}{-1}
+	\newpage
+}
+\usepackage{amsthm}
+\usepackage{mdframed}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+\onecolumn
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{EE5609: Matrix Theory\\
+          Assignment-19\\}
+\author{Y.Pranaya\\
+AI20MTECH14014 }
+\maketitle
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\renewcommand{\theequation}{\arabic{equation}}
+\begin{abstract}
+This document contains a solution for a quadratic form of given matrix.
+\end{abstract}
+Download the latex-tikz codes from 
+
+%
+\begin{lstlisting}
+https://github.com/pranaya14014/EE5609/blob/master/Assignment19
+\end{lstlisting}
+%
+
+\section{PROBLEM}
+Let
+\begin{align}
+\vec{A} = \myvec{1&2&0\\0&0&-2\\0&0&1}
+\end{align}
+and define for $x,y,z \in \mathbb{R}$
+\begin{align}
+\vec{Q}(x,y,z)= \myvec{x&y&z}\vec{A}\myvec{x\\y\\z}
+\end{align}
+Which of the following are True?
+\begin{enumerate}
+\item[1.] The matrix of second order partial derivatives of the quadratic form of $\vec{Q}$ is $2\vec{A}$.
+\item[2.] The rank of the quadratic form of $\vec{Q}$ is 2
+\item[3.] The signature of the quadratic form $\vec{Q}$ is $(++0)$
+\item[4.] The quadratic form $\vec{Q}$ takes the value 0 for some non-zero vector $(x,y,z)$
+\end{enumerate}
+\section{SOLUTION}
+\renewcommand{\thetable}{1}
+\begin{table*}
+\begin{tabular*}{\textwidth}{|c|@{\extracolsep{\fill}}|c|}
+\hline
+\textbf{Option 1} & The matrix of second order partial derivatives of the quadratic form of $\vec{Q}$ is $2\vec{A}$.\\
+\hline
+\multirow{3}{*}{Solution} & $\vec{Q}(x,y,z)$= \myvec{x&y&z}$\vec{A}$\myvec{x\\y\\z} = \myvec{x&y&z}\myvec{x+2y\\-2z\\z} = $x^2+z^2+2xy-2yz$ \\
+& First order partial derivaties: $\frac{\partial\vec{Q}}{\partial x}= 2x+2y \quad \frac{\partial\vec{Q}}{\partial y} = 2x-2z \quad \frac{\partial\vec{Q}}{\partial z}= 2z-2y $\\
+& Second order partial derivatives of: $\frac{\partial^2\vec{Q}}{\partial x^2}= 2 \quad \frac{\partial^2\vec{Q}}{\partial y^2}= 0 \quad \frac{\partial^2\vec{Q}}{\partial z^2}= 2$\\
+&$ \quad \frac{\partial^2 \vec{Q}}{\partial x \partial y}= \frac{\partial^2 \vec{Q}}{\partial y \partial x}= 2 \quad  \frac{\partial^2 \vec{Q}}{\partial x \partial z}= \frac{\partial^2 \vec{Q}}{\partial z \partial x}= 0 \quad \frac{\partial^2 \vec{Q}}{\partial y \partial z}= \frac{\partial^2 \vec{Q}}{\partial z \partial y}= -2$  \\
+& Matrix of second order partial derivatives $\vec{Q}$: \myvec{\frac{\partial^2\vec{Q}}{\partial x^2} &\frac{\partial^2 \vec{Q}}{\partial x \partial y}& \frac{\partial^2 \vec{Q}}{\partial x \partial z} \\ \frac{\partial^2 \vec{Q}}{\partial y \partial x} & \frac{\partial^2\vec{Q}}{\partial y^2}&  \frac{\partial^2 \vec{Q}}{\partial y \partial z}\\ \frac{\partial^2 \vec{Q}}{\partial z \partial x} & \frac{\partial^2 \vec{Q}}{\partial z \partial y} &\frac{\partial^2\vec{Q}}{\partial z^2}} = \myvec{2&2&0\\2&0&-2\\0&-2&2} $\neq 2\vec{A}$\\
+& Hence, $\textbf{Option 1}$ is not correct.\\
+\hline
+\end{tabular*}
+\label{Table.1}
+\caption{Solution for Option 1}
+\end{table*}
+\renewcommand{\thetable}{2}
+\begin{table*}
+\begin{tabular*}{\textwidth}{|c|@{\extracolsep{\fill}}|c|}
+\hline
+\textbf{Option 2} & The rank of the quadratic form of $\vec{Q}$ is 2\\
+\hline
+\multirow{3}{*}{Solution} & From above we have quadratic form of $\vec{Q}=\myvec{2&2&0\\2&0&-2\\0&-2&2} $\\
+& Echelon form reduction: \myvec{2&2&0\\2&0&-2\\0&-2&2}$\xleftrightarrow{R_1=\frac{1}{2}}$\myvec{1&1&0\\2&0&-2\\0&-2&2}
+ $\xleftrightarrow{R_2 \rightarrow R_2-2R_1}$ \myvec{1&1&0\\0&-2&-2\\0&-2&2} \\& $\xleftrightarrow{R_2 \rightarrow \frac{-1}{2}R_2}$ \myvec{1&1&0\\0&1&1\\0&-2&2} $\xleftrightarrow{R_3 \rightarrow R_3+2R_2}$ \myvec{1&1&0\\0&1&1\\0&0&4} $\xleftrightarrow{R_3 \rightarrow \frac{1}{4}R_3}$ \myvec{1&1&0\\0&1&1\\0&0&1}
+\\& $\xleftrightarrow{R_1 \rightarrow R_1-R_2}$ \myvec{1&0&0\\0&1&1\\0&0&1}$\xleftrightarrow{R_2 \rightarrow R_2-R_3}$ \myvec{1&0&0\\0&1&0\\0&0&1} \\
+& Rank = Number of non-zero rows = 3 $\neq$ 2 \\
+&  Hence, $\textbf{Option 2}$ is not correct.\\
+\hline
+\end{tabular*}
+\label{Table.2}
+\caption{Solution for Option 2}
+\end{table*}
+\renewcommand{\thetable}{3}
+\begin{table*}
+\begin{tabular*}{\textwidth}{|c|@{\extracolsep{\fill}}|c|}
+\hline
+\textbf{Option 3} & The signature of the quadratic form $\vec{Q}$ is $(++0)$\\
+\hline
+\multirow{3}{*}{Solution} & From above we have quadratic form of $\vec{Q}$ = \myvec{2&2&0\\2&0&-2\\0&-2&2}\\
+& Finding eigen values: \mydet{\vec{Q}-\lambda\vec{I}}= \myvec{2-\lambda& 2&0\\2&-\lambda&-2\\0&-2&2-\lambda}\\&
+$\implies (2-\lambda)\brak{-2\lambda +\lambda^2+ 4} +8 = 0$\\&
+$\implies \lambda^3-4\lambda^2-4\lambda+16=0 $ \\&
+$\lambda_1 = 4 \quad \lambda_2= 2 \quad \lambda_3 = -2$ \\&
+Signature = $(n_{+},n_{-},n_{0}) = (2,1,0)\neq (++0)$\\&
+Hence, $\textbf{Option 3}$ is not correct.\\
+\hline
+\end{tabular*}
+\label{Table.3}
+\caption{Solution for Option 3}
+\end{table*}
+\renewcommand{\thetable}{4}
+\begin{table*}
+\begin{tabular*}{\textwidth}{|c|@{\extracolsep{\fill}}|c|}
+\hline
+\textbf{Option 4} &The quadratic form $\vec{Q}$ takes the value 0 for some non-zero vector $(x,y,z)$\\
+\hline
+\multirow{3}{*}{Solution} & From above we have quadratic form of $\vec{Q}$ = \myvec{2&2&0\\2&0&-2\\0&-2&2}\\ &
+we can see that few elements are zero even though the vectors are non-zero. \\ & Therefore, \textbf{Option 4} is correct.\\
+\hline
+\end{tabular*}
+\label{Table.4}
+\caption{Solution for Option 4}
+\end{table*}
+  
+\end{document}
