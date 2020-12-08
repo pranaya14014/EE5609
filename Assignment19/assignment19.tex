@@ -163,7 +163,7 @@ Which of the following are True?
 \item[3.] The signature of the quadratic form $\vec{Q}$ is $(++0)$
 \item[4.] The quadratic form $\vec{Q}$ takes the value 0 for some non-zero vector $(x,y,z)$
 \end{enumerate}
-\section{SOLUTION}
+\section{DEFINITIONS}
 \renewcommand{\thetable}{1}
 \begin{longtable}{|c|l|}
     \hline
@@ -185,12 +185,11 @@ Which of the following are True?
 	\caption{Definitions}
     \label{Table.1}
 \end{longtable}
- 
+\section{SOLUTION}
 \renewcommand{\thetable}{2}
-\begin{table*}
-\begin{tabular*}{\textwidth}{|c|@{\extracolsep{\fill}}|c|}
+\begin{longtable}{|c|l|}
 \hline
-\textbf{Option 1} & The matrix of second order partial derivatives of the quadratic form of $\vec{Q}$ is $2\vec{A}$.\\
+\multirow{3}{*}{\textbf{Option 1}} & \\ & \textbf{The matrix of second order partial derivatives of the quadratic form of $\vec{Q}$ is $2\vec{A}$.}\\
 \hline
 \multirow{3}{*}{Solution} & $\vec{Q}(x,y,z)$= \myvec{x&y&z}$\vec{A}$\myvec{x\\y\\z} = \myvec{x&y&z}\myvec{x+2y\\-2z\\z} = $x^2+z^2+2xy-2yz$ \\
 & First order partial derivaties: $\frac{\partial\vec{Q}}{\partial x}= 2x+2y \quad \frac{\partial\vec{Q}}{\partial y} = 2x-2z \quad \frac{\partial\vec{Q}}{\partial z}= 2z-2y $\\
@@ -198,16 +197,11 @@ Which of the following are True?
 &$ \quad \frac{\partial^2 \vec{Q}}{\partial x \partial y}= \frac{\partial^2 \vec{Q}}{\partial y \partial x}= 2 \quad  \frac{\partial^2 \vec{Q}}{\partial x \partial z}= \frac{\partial^2 \vec{Q}}{\partial z \partial x}= 0 \quad \frac{\partial^2 \vec{Q}}{\partial y \partial z}= \frac{\partial^2 \vec{Q}}{\partial z \partial y}= -2$  \\
 & Matrix of second order partial derivatives $\vec{Q}$: \myvec{\frac{\partial^2\vec{Q}}{\partial x^2} &\frac{\partial^2 \vec{Q}}{\partial x \partial y}& \frac{\partial^2 \vec{Q}}{\partial x \partial z} \\ \frac{\partial^2 \vec{Q}}{\partial y \partial x} & \frac{\partial^2\vec{Q}}{\partial y^2}&  \frac{\partial^2 \vec{Q}}{\partial y \partial z}\\ \frac{\partial^2 \vec{Q}}{\partial z \partial x} & \frac{\partial^2 \vec{Q}}{\partial z \partial y} &\frac{\partial^2\vec{Q}}{\partial z^2}} = \myvec{2&2&0\\2&0&-2\\0&-2&2} $\neq 2\vec{A}$\\
 & Hence, $\textbf{Option 1}$ is not correct.\\
+
 \hline
-\end{tabular*}
-\label{Table.2}
-\caption{Solution for Option 1}
-\end{table*}
-\renewcommand{\thetable}{3}
-\begin{table*}
-\begin{tabular*}{\textwidth}{|c|@{\extracolsep{\fill}}|c|}
-\hline
-\textbf{Option 2} & The rank of the quadratic form of $\vec{Q}$ is 2\\
+
+
+\multirow{3}{*}{\textbf{Option 2}} &\\ & \textbf{The rank of the quadratic form of $\vec{Q}$ is 2}\\
 \hline
 \multirow{3}{*}{Solution} & From above we have quadratic form of $\vec{Q}=\myvec{2&2&0\\2&0&-2\\0&-2&2} $\\
 & Echelon form reduction: \myvec{2&2&0\\2&0&-2\\0&-2&2}$\xleftrightarrow{R_1=\frac{1}{2}}$\myvec{1&1&0\\2&0&-2\\0&-2&2}
@@ -216,15 +210,8 @@ Which of the following are True?
 & Rank = Number of non-zero rows = 3 $\neq$ 2 \\
 &  Hence, $\textbf{Option 2}$ is not correct.\\
 \hline
-\end{tabular*}
-\label{Table.3}
-\caption{Solution for Option 2}
-\end{table*}
-\renewcommand{\thetable}{4}
-\begin{table*}
-\begin{tabular*}{\textwidth}{|c|@{\extracolsep{\fill}}|c|}
-\hline
-\textbf{Option 3} & The signature of the quadratic form $\vec{Q}$ is $(++0)$\\
+
+\multirow{3}{*}{\textbf{Option 3}} & \\ & \textbf{The signature of the quadratic form $\vec{Q}$ is $(++0)$}\\
 \hline
 \multirow{3}{*}{Solution} & From above we have quadratic form of $\vec{Q}$ = \myvec{2&2&0\\2&0&-2\\0&-2&2}\\
 & Finding eigen values: \mydet{\vec{Q}-\lambda\vec{I}}= \myvec{2-\lambda& 2&0\\2&-\lambda&-2\\0&-2&2-\lambda}\\&
@@ -234,23 +221,15 @@ $\lambda_1 = 4 \quad \lambda_2= 2 \quad \lambda_3 = -2$ \\&
 Signature = $(n_{+},n_{-},n_{0}) = (2,1,0)\neq (++0)$\\&
 Hence, $\textbf{Option 3}$ is not correct.\\
 \hline
-\end{tabular*}
-\label{Table.4}
-\caption{Solution for Option 3}
-\end{table*}
-\renewcommand{\thetable}{5}
-\begin{table*}
-\begin{tabular*}{\textwidth}{|c|@{\extracolsep{\fill}}|c|}
-\hline
-\textbf{Option 4} &The quadratic form $\vec{Q}$ takes the value 0 for some non-zero vector $(x,y,z)$\\
+
+\multirow{3}{*}{\textbf{Option 4}} &\\ & \textbf{The quadratic form $\vec{Q}$ takes the value 0 for some non-zero vector $(x,y,z)$}\\
 \hline
 \multirow{3}{*}{Solution} & From above we have quadratic form of $\vec{Q}$ = \myvec{2&2&0\\2&0&-2\\0&-2&2}\\ &
 we can see that few elements are zero even though the vectors are non-zero. \\ & Therefore, \textbf{Option 4} is correct.\\
-\hline
-\end{tabular*}
-\label{Table.5}
-\caption{Solution for Option 4}
-\end{table*}
 
+	\hline
+	\caption{Solution}
+    \label{Table.2}
+\end{longtable}
   
 \end{document}
