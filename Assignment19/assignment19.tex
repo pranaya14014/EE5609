@@ -165,6 +165,28 @@ Which of the following are True?
 \end{enumerate}
 \section{SOLUTION}
 \renewcommand{\thetable}{1}
+\begin{longtable}{|c|l|}
+    \hline
+	\multirow{3}{*}{Quadratic Form of a matrix} 
+	& \\
+	& Let $\vec{V}$ be a vector space over $\mathbb{R}$. $\vec{A}$ be a symmetric matrix $n\times n$.\\& Quadratic form on $\vec{V}$ is a real function, $(\vec{F}:\vec{V}\rightarrow\mathbb{R})$ defined as 
+	\\& $F(x)= \vec{x}\vec{A}\vec{x}^T= \sum_{i,j=1}^{n}a_{ij}x_ix_j$  where $\vec{x} \in \vec{V}$ \\
+
+	\hline
+	\multirow{3}{*}{Signature of Quadratic form} 
+	& \\
+	& The signature of quadratic form is $(n_{+},n_{-},n_{0})$ \\ & where $n_{+}$ is the number of positive entries, $n_{-}$ is number of negative entries and \\ & $n_{0}$ is number of zero's in $a_{ii}$ \\
+	\hline
+	\multirow{3}{*}{Rank of quadratic form} 
+	& \\
+	& Rank of quadratic form is the rank of its matrix \\
+	& which is maximum number of linearly independent rows/columns of a matrix \\
+	\hline
+	\caption{Definitions}
+    \label{Table.1}
+\end{longtable}
+ 
+\renewcommand{\thetable}{2}
 \begin{table*}
 \begin{tabular*}{\textwidth}{|c|@{\extracolsep{\fill}}|c|}
 \hline
@@ -178,10 +200,10 @@ Which of the following are True?
 & Hence, $\textbf{Option 1}$ is not correct.\\
 \hline
 \end{tabular*}
-\label{Table.1}
+\label{Table.2}
 \caption{Solution for Option 1}
 \end{table*}
-\renewcommand{\thetable}{2}
+\renewcommand{\thetable}{3}
 \begin{table*}
 \begin{tabular*}{\textwidth}{|c|@{\extracolsep{\fill}}|c|}
 \hline
@@ -195,10 +217,10 @@ Which of the following are True?
 &  Hence, $\textbf{Option 2}$ is not correct.\\
 \hline
 \end{tabular*}
-\label{Table.2}
+\label{Table.3}
 \caption{Solution for Option 2}
 \end{table*}
-\renewcommand{\thetable}{3}
+\renewcommand{\thetable}{4}
 \begin{table*}
 \begin{tabular*}{\textwidth}{|c|@{\extracolsep{\fill}}|c|}
 \hline
@@ -213,10 +235,10 @@ Signature = $(n_{+},n_{-},n_{0}) = (2,1,0)\neq (++0)$\\&
 Hence, $\textbf{Option 3}$ is not correct.\\
 \hline
 \end{tabular*}
-\label{Table.3}
+\label{Table.4}
 \caption{Solution for Option 3}
 \end{table*}
-\renewcommand{\thetable}{4}
+\renewcommand{\thetable}{5}
 \begin{table*}
 \begin{tabular*}{\textwidth}{|c|@{\extracolsep{\fill}}|c|}
 \hline
@@ -226,8 +248,9 @@ Hence, $\textbf{Option 3}$ is not correct.\\
 we can see that few elements are zero even though the vectors are non-zero. \\ & Therefore, \textbf{Option 4} is correct.\\
 \hline
 \end{tabular*}
-\label{Table.4}
+\label{Table.5}
 \caption{Solution for Option 4}
 \end{table*}
+
   
 \end{document}
